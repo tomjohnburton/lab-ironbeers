@@ -2,21 +2,25 @@
 {{#each rand}}
 <div class="beer-container-rand">
   <div class="image-rand img-fluid">
-<img src={{image_url}} alt="">
+<img src={{this.image_url}} alt="">
 
   </div>
 
   <div class="text-rand">
-<h2>{{name}} </h2>
-<h3>{{tagline}} </h3>
-<p>{{description}} </p>
+<h2>{{this.name}} </h2>
+<h3>{{this.tagline}} </h3>
+<p>{{this.description}} </p>
+
+<h4>Food Paring</h4>
 <ul>
-  {{#each rand.food_pairing}}
-<li>{{food_pairing}} </li>
+  {{#each food_pairing}}
+<li>{{this}} </li>
   {{/each}}
 
 </ul>
-<p>{{brewers_tips}} </p>
+
+<h4>Brewers Tips</h4>
+<p>{{this.brewers_tips}} </p>
 
   </div>
 </div>
